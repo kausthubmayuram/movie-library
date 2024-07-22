@@ -1,0 +1,7 @@
+.nav-item, .nav-link, .navbar-brand, .navbar-toggler-icon{
+    color: white;
+}
+
+.nav-link:hover,.nav-link.active{
+    color: #F04E45;
+}
