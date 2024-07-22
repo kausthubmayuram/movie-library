@@ -11,6 +11,6 @@ export class DataService {
   constructor(private http:HttpClient) { }
 
   getAllMovies(){
-    return this.http.get(this.baseUrlLoca + '/movies/getAll');
+    return this.http.get(this.baseUrlProd + '/movies/getAll');
   }
 }
