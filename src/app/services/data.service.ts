@@ -11,6 +11,14 @@ export class DataService {
   constructor(private http:HttpClient) { }
 
   getAllMovies(){
-    return this.http.get(this.baseUrlProd + '/movies/getAll');
+    return this.http.get('movies/getAll');
+  }
+
+  addMovie(data:any){
+    return this.http.post('/movies/add',data);
+  }
+
+  deleteMovie(id:any){
+    return this.http.delete(`/movies/delete/${id}`);
   }
 }

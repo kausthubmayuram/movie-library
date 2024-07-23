@@ -3,7 +3,7 @@
     <div class="row ">
         <ng-container *ngFor="let item of movies">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 my-3">
-                <div class="card h-100">
+                <div class="card h-100 cursor-pointer" (click)="openMovieDetails(item.id)">
                     <img [src]="item.poster"
                         class="card-img-top" alt="...">
                     <!-- <div class="card-body">
@@ -12,7 +12,8 @@
                             additional content. This content is a little bit longer.</p>
                     </div> -->
                     <div class="card-footer">
-                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        <!-- <small class="text-body-secondary"><i class="bi bi-star-fill text-danger me-2"></i>{{item.rating}}/10</small> -->
+                        <small class="text-body-secondary fw-bolder">{{item.name}}</small>
                     </div>
                 </div>
             </div>

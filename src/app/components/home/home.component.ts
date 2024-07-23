@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class HomeComponent implements OnInit {
 
   movies:any = [];
-  constructor(private dataService:DataService) { }
+  constructor(private dataService:DataService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -18,4 +19,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  openMovieDetails(id:any){
+    this.router.navigate(['details', id]);
+  }
 }

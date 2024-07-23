@@ -1,1 +1,44 @@
-<p>add-new works!</p>
+<div class="container px-5 my-5">
+    <form id="contactForm" [formGroup]="movieForm" (ngSubmit)="addMovie()">
+        <div class="mb-3">
+            <label class="form-label" for="newField1">Movie Name</label>
+            <input class="form-control" id="newField1" type="text" placeholder="Movie Name"  formControlName="movieName"/>
+            <div class="text-danger" *ngIf="(movieForm.controls['movieName']?.touched || submitted) && movieForm.controls['movieName']?.errors?.['required']">Movie Name is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" id="description" type="text" placeholder="Description" style="height: 10rem;" formControlName="description"></textarea>
+            <div class="text-danger" *ngIf="(movieForm.controls['description']?.touched || submitted) && movieForm.controls['description']?.errors?.['required']">Description is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="director">Director</label>
+            <input class="form-control" id="director" type="text" placeholder="Director"  formControlName="director"/>
+            <div class="text-danger" *ngIf="(movieForm.controls['director']?.touched || submitted) && movieForm.controls['director']?.errors?.['required']">Director is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="poster">Poster Image Url</label>
+            <input class="form-control" id="poster" type="text" placeholder="Poster Image Url"  formControlName="poster"/>
+            <div class="text-danger" *ngIf="(movieForm.controls['poster']?.touched || submitted) && movieForm.controls['poster']?.errors?.['required']">Poster Image Url is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="language">Language</label>
+            <input class="form-control" id="language" type="text" placeholder="Language"  formControlName="language"/>
+            <div class="text-danger" *ngIf="(movieForm.controls['language']?.touched || submitted) && movieForm.controls['language']?.errors?.['required']">Language is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="rating">Rating</label>
+            <input class="form-control" id="rating" type="text" placeholder="Rating"  formControlName="rating"/>
+            <div class="text-danger" *ngIf="(movieForm.controls['rating']?.touched || submitted) && movieForm.controls['rating']?.errors?.['required']" >Rating is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="releaseDate">Release Date</label>
+            <input class="form-control" id="releaseDate" type="text" placeholder="Release Date - YYYY-MM-DD"  formControlName="releaseDate"/>
+            <div class="text-danger" *ngIf="(movieForm.controls['releaseDate']?.touched || submitted) && movieForm.controls['releaseDate']?.errors?.['required']" >Release Date is required.</div>
+        </div>
+        
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg" id="submitButton" type="submit" [disabled]="movieForm.invalid">Add Movie</button>
+            <button class="btn btn-danger btn-lg my-2" id="submitButton" (click)="reset()">Reset Form</button>
+        </div>
+    </form>
+</div>
