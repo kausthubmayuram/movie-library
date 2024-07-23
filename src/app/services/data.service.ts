@@ -19,6 +19,14 @@ export class DataService {
   }
 
   deleteMovie(id:any){
-    return this.http.delete(`/movies/delete/${id}`);
+    return this.http.delete(`/movies/${id}`);
+  }
+
+  editMovie(id:any, data:any){
+    return this.http.put(`/movies/${id}`,data);
+  }
+
+  getbyId(id:any){
+    return this.http.get(`/movies/${id}`);
   }
 }

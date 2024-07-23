@@ -1,1 +1,45 @@
-<p>edit-movie works!</p>
+<div class="container-fluid">
+    <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal">Manage Movies</h1>
+          <p class="fs-5 text-muted">Manage Movies, delete if required or edit/update exisiting details for the movies</p>
+        </div>
+      </header>
+    <div class="row my-2">
+
+        <main class="col">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Director</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let item of moviesList;let index = index;">
+                            <tr>
+                                <td>{{index + 1}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.description}}</td>
+                                <td>{{item.director}}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="btn text-success" (click)="editMovie(item)"><i class="bi bi-pencil-square"></i></button>
+                                        <button class="btn text-danger" (click)="deleteMovie(item)"><i class="bi bi-trash3"></i></button>
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                        </ng-container>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>

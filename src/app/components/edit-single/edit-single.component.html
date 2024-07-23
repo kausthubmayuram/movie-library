@@ -1,11 +1,11 @@
 <div class="container px-5 my-5">
     <header>
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-          <h1 class="display-4 fw-normal">Insert Movie</h1>
-          <p class="fs-5 text-muted">Insert New Movie Details like Name,Director,Language, Description etc</p>
+          <h1 class="display-4 fw-normal">Modify Movie</h1>
+          <p class="fs-5 text-muted">Modify Movie Details like Name,Director,Language, Description etc</p>
         </div>
       </header>
-    <form id="contactForm" [formGroup]="movieForm" (ngSubmit)="addMovie()">
+    <form id="contactForm" [formGroup]="movieForm" (ngSubmit)="updateMovie()">
         <div class="mb-3">
             <label class="form-label" for="newField1">Movie Name</label>
             <input class="form-control" id="newField1" type="text" placeholder="Movie Name"  formControlName="movieName"/>
@@ -43,8 +43,8 @@
         </div>
         
         <div class="d-grid">
-            <button class="btn btn-primary btn-lg" id="submitButton" type="submit" [disabled]="movieForm.invalid">Add Movie</button>
-            <button class="btn btn-danger btn-lg my-2" id="submitButton" (click)="reset()">Reset Form</button>
+            <button class="btn btn-success btn-lg" id="submitButton" type="submit" [disabled]="movieForm.invalid">Update Movie</button>
+            <button class="btn btn-warning btn-lg my-2" (click)="goBack()">Go Back</button>
         </div>
     </form>
 </div>

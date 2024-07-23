@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { DataService } from 'src/app/services/data.service';
 import { AlertsService } from 'src/app/shared/utils/alerts.service';
 
@@ -48,8 +47,11 @@ export class AddNewComponent implements OnInit {
       "rating": this.movieForm.value.rating,
       "cast":[]
   }
+  console.log(payload);
+  
     this.dataService.addMovie(payload).subscribe(data=>{
       console.log(data);
+      this.alertService.showSuccess("Movie Added Successfully","Success");
       this.router.navigate(['/']);
     })
   }
