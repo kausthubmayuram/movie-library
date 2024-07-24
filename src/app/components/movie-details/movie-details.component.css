@@ -1,0 +1,12 @@
+.poster-class{
+    max-height: 300px;
+}
+
+.custom-button{
+    background-color: #03002f;
+    color: white;
+}
+
+.custom-button:hover{
+    color: #F04E45;
+}
