@@ -1,27 +1,33 @@
-# Final
+## Movies Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Hi, This is a Small **Angular 16** Project about **Personal Movie Library**. The App has Features like Adding a new movie, Updating existing movies,etc.
+The Application has CRUD Operations fully functional.
 
-## Development server
+## Live Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The Application is Deployed and live on **Netlify** at the following URL - *https://movie-library-kausthub.netlify.app*
 
-## Code scaffolding
+Please Note:-
+ - The Api used in the application is also developed by me (**Node.js Project**). *(https://github.com/kausthubmayuram/movies-api)*
+ - The Api is Hosted on a Free Server which goes to sleep after inactivity, hence when using the application there might be cases/times when the api might take time.
+ 
+## Install and Locally Running
+Clone the Repository at desired location
+Then
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    npm install
+   
+   After installing dependencies to run the application
 
-## Build
+    npm start
+    
+   Visit `http://localhost:4200`.
+## Snapshots of the Application
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<img src="https://github.com/kausthubmayuram/movie-library/blob/main/src/assets/images/Home.PNG?raw=true" width="300"  /> <img src="https://github.com/kausthubmayuram/movie-library/blob/main/src/assets/images/Manage.PNG?raw=true" width="300"  /> <img src="https://github.com/kausthubmayuram/movie-library/blob/main/src/assets/images/Details.PNG?raw=true" width="300"  /> <img src="https://github.com/kausthubmayuram/movie-library/blob/main/src/assets/images/Add.PNG?raw=true" width="300"  />
 
-## Running unit tests
+## Authors
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Kausthub Mayuram](https://github.com/kausthubmayuram)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Uday Phalke
