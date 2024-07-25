@@ -10,6 +10,7 @@ import { SearchPipe } from './shared/pipes/search.pipe';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InterceptorInterceptor } from './interceptor.interceptor';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { InterceptorInterceptor } from './interceptor.interceptor';
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-center',
       preventDuplicates: true,
-    })
+    }),
+    NgHttpLoaderModule.forRoot()
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},{ provide: HTTP_INTERCEPTORS, useClass: InterceptorInterceptor, multi: true } ],
   bootstrap: [AppComponent]
